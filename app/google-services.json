@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "926945233428",
+    "project_id": "trimory-2fbb8",
+    "storage_bucket": "trimory-2fbb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926945233428:android:636ef3a54d275fcb2ab501",
+        "android_client_info": {
+          "package_name": "com.ame.android.trimory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926945233428-gvscbqf7panoe31s2o5k2i31b5ite3b2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBu4E65EnqSfF4ZZT6YpbfdekQ6ZTLSeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926945233428-gvscbqf7panoe31s2o5k2i31b5ite3b2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
