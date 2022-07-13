@@ -1,6 +1,7 @@
 package com.ame.android.trimory.screen.main.activity
 
 import androidx.activity.viewModels
+import androidx.navigation.NavController
 import com.ame.android.trimory.R
 import com.ame.android.trimory.base.BaseActivity
 import com.ame.android.trimory.databinding.ActivityMainBinding
