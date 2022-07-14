@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "926945233428-a0423174f07ni37otnkeakjgeu44b73a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ame.android.trimory",
+            "certificate_hash": "1c3826da472dd207c0b08f29dbf3359fe64ce513"
+          }
+        },
+        {
           "client_id": "926945233428-gvscbqf7panoe31s2o5k2i31b5ite3b2.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -70,6 +70,7 @@ dependencies {
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.4'
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     // Android Compose
