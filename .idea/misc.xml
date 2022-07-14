@@ -3,14 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../.gradle/caches/transforms-3/96b3a4c042e39b83e1ddb9a439c3ebcb/transformed/oauth-5.1.1/res/layout/nid_progress_dialog.xml" value="0.15625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_nav.xml" value="0.10185185185185185" />
+        <entry key="app/src/main/res/layout/activity_naver_login.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_fifth.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_fourth.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/menu/bottom_nav_bar.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/xml/naver_api_key.xml" value="0.31333333333333335" />
       </map>
     </option>
   </component>
