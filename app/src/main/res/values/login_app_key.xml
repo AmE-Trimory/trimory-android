@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--출시 전 보안을 위해 깃헙에서 삭제 후 .gitignore로 관리-->
 <resources>
     <string name="kakao_app_key">0a755c09225272e3e811d9247f307443</string>
-    <string name="kakao_native_key">4d0fdb34b00303d0c3b0c2d72fa0c2fc</string>
+    <string name="kakao_native_key">"4d0fdb34b00303d0c3b0c2d72fa0c2fc</string>
 </resources>
