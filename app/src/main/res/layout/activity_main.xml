@@ -7,7 +7,7 @@
     <data>
         <variable
             name="vm"
-            type="com.ame.android.trimory.screen.main.viewmodel.MainViewModel" />
+            type="com.ame.android.trimory.screen.viewmodel.MainViewModel" />
 
     </data>
 

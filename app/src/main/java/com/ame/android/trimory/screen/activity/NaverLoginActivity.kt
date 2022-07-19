@@ -1,21 +1,19 @@
-package com.ame.android.trimory.screen.login.activity
+package com.ame.android.trimory.screen.activity
 
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.ame.android.trimory.R
 import com.ame.android.trimory.base.BaseActivity
 import com.ame.android.trimory.databinding.ActivityNaverLoginBinding
-import com.ame.android.trimory.screen.login.viewmodel.LoginViewModel
+import com.ame.android.trimory.screen.viewmodel.LoginViewModel
 import com.navercorp.nid.NaverIdLoginSDK
-import com.navercorp.nid.NaverIdLoginSDK.oauthLoginCallback
 import com.navercorp.nid.oauth.NidOAuthLogin
 import com.navercorp.nid.oauth.OAuthLoginCallback
 import com.navercorp.nid.profile.NidProfileCallback
 import com.navercorp.nid.profile.data.NidProfileResponse
 
-class NaverLoginActivity : BaseActivity<ActivityNaverLoginBinding,LoginViewModel>() {
+class NaverLoginActivity : BaseActivity<ActivityNaverLoginBinding, LoginViewModel>() {
     private val OAUTH_CLIENT_ID = getString(R.string.naver_oauth_client_id)
     private val OAUTH_CLIENT_SECRET = getString(R.string.naver_oauth_client_secret)
     private val OAUTH_CLIENT_NAME = getString(R.string.naver_oauth_client_name)

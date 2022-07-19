@@ -1,10 +1,10 @@
-package com.ame.android.trimory.screen.main.fragment
+package com.ame.android.trimory.screen.fragment
 
 import androidx.fragment.app.activityViewModels
 import com.ame.android.trimory.R
 import com.ame.android.trimory.base.BaseFragment
 import com.ame.android.trimory.databinding.FragmentMainBinding
-import com.ame.android.trimory.screen.main.viewmodel.MainViewModel
+import com.ame.android.trimory.screen.viewmodel.MainViewModel
 
 /**
  * Created by KimBH on 2022/07/12.

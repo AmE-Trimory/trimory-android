@@ -1,14 +1,12 @@
-package com.ame.android.trimory.screen.home.activity
+package com.ame.android.trimory.screen.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ame.android.trimory.R
-import com.ame.android.trimory.databinding.ActivityMainBinding
 import com.ame.android.trimory.databinding.ActivityNavBinding
 
 class NavActivity : AppCompatActivity() {

@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screen.login.activity.KakaoLoginActivity">
+    tools:context=".screen.activity.KakaoLoginActivity">
 
     <data>
         <variable
             name="vm"
-            type="com.ame.android.trimory.screen.login.viewmodel.LoginViewModel" />
+            type="com.ame.android.trimory.screen.viewmodel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

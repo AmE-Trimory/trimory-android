@@ -1,4 +1,4 @@
-package com.ame.android.trimory.screen.login.activity
+package com.ame.android.trimory.screen.activity
 
 import android.content.Intent
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.ame.android.trimory.R
 import com.ame.android.trimory.base.BaseActivity
 import com.ame.android.trimory.databinding.ActivityLoginBinding
-import com.ame.android.trimory.screen.login.viewmodel.LoginViewModel
+import com.ame.android.trimory.screen.viewmodel.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions

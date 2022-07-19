@@ -1,4 +1,4 @@
-package com.ame.android.trimory.screen.home.fragment
+package com.ame.android.trimory.screen.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.ame.android.trimory.R
-import com.ame.android.trimory.base.BaseFragment
-import com.ame.android.trimory.databinding.ActivityMainBinding
 
-class FifthFragment : Fragment() {
-
+class ThirdFragment : Fragment() {
     lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,12 +21,11 @@ class FifthFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_fifth,container,false)
+        return inflater.inflate(R.layout.fragment_third,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navController = Navigation.findNavController(view)
     }
 
