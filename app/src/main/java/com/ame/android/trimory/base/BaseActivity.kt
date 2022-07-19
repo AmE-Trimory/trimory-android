@@ -9,13 +9,12 @@ import com.ame.android.trimory.base.response.ResponseResult
 import com.ame.android.trimory.network.loading.LoadingDialog
 import com.ame.android.trimory.network.util.ErrorUtil
 import com.ame.android.trimory.network.util.ResultCodeUtil
-import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Created by KimBH on 2022/07/12.
  */
 
-abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity(), BaseContractView {
+abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel>  : AppCompatActivity(), BaseContractView {
     protected lateinit var mDataBinding: DB
     abstract val mViewModel: VM
 

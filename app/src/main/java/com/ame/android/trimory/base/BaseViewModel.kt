@@ -3,7 +3,6 @@ package com.ame.android.trimory.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ame.android.trimory.base.response.ResponseResult
-
 /**
  * Created by KimBH on 2022/07/12.
  */

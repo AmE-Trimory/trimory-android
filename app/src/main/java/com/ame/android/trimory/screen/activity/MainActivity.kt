@@ -5,9 +5,12 @@ import com.ame.android.trimory.R
 import com.ame.android.trimory.base.BaseActivity
 import com.ame.android.trimory.databinding.ActivityMainBinding
 import com.ame.android.trimory.screen.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
+@AndroidEntryPoint
+class MainActivity  @Inject constructor(
+): BaseActivity<ActivityMainBinding, MainViewModel>() {
     override val mViewModel: MainViewModel by viewModels()
 
     override fun getLayoutRes(): Int = R.layout.activity_main
