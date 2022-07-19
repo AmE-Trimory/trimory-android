@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 /**
  * Created by KimBH on 2022/07/12.
  */
-@AndroidEntryPoint
+
 abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity(), BaseContractView {
     protected lateinit var mDataBinding: DB
     abstract val mViewModel: VM
