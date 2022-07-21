@@ -1,7 +1,10 @@
 package com.ame.android.trimory.screen.activity
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -22,7 +25,7 @@ import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
 
-class KakaoLoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
+class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
     override val mViewModel: LoginViewModel by viewModels()
     private lateinit var mAuth: FirebaseAuth
     private val mGso: GoogleSignInOptions = GoogleSignInOptions
@@ -40,6 +43,8 @@ class KakaoLoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
         }
         with(mDataBinding) {
             vm = mViewModel
+            val googleText: TextView = mDataBinding.btnGoogleLogin.getChildAt(0) as TextView
+            googleText.setText("구글로 시작하기")
 //            mDataBinding.btnKakaoLogin.setOnClickListener {
 //                loginKakao()
 //            }
@@ -65,7 +70,7 @@ class KakaoLoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
         }
     }
 
-    private fun loginKakao(){
+    private fun loginKakao() {
         // 카카오톡이 설치되어 있으면 카카오톡으로 로그인, 아니면 카카오계정으로 로그인
         if (UserApiClient.instance.isKakaoTalkLoginAvailable(this)) {
             UserApiClient.instance.loginWithKakaoTalk(this) { token, error ->
@@ -89,55 +94,54 @@ class KakaoLoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
         }
     }
 
-    private fun logoutKakao(){  // 토큰을 전부 만료시킴
+    private fun logoutKakao() {  // 토큰을 전부 만료시킴
         UserApiClient.instance.logout { error ->
             if (error != null) {
                 Log.e("카카오", "로그아웃 실패. SDK에서 토큰 삭제됨", error)
-            }
-            else {
+            } else {
                 Log.i("카카오", "로그아웃 성공. SDK에서 토큰 삭제됨")
             }
         }
     }
 
-    private fun deleteKakao(){  // 토큰을 삭제 시킴 => 연결 끊
+    private fun deleteKakao() {  // 토큰을 삭제 시킴 => 연결 끊
         UserApiClient.instance.unlink { error ->
             if (error != null) {
                 Log.e("카카오", "연결 끊기 실패", error)
-            }
-            else {
+            } else {
                 Log.i("카카오", "연결 끊기 성공. SDK에서 토큰 삭제 됨")
             }
         }
     }
 
     // google Intent 결과
-    private val getgoogleResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-        val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
-        try {
-            val account = task.getResult(ApiException::class.java)!!
-            registerGoogleUser(account.idToken!!)
-        } catch (e:ApiException){
-            Log.e("구글", "${e} 로그인 실패. 로그인 데이터 없음")
+    private val getgoogleResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
+            try {
+                val account = task.getResult(ApiException::class.java)!!
+                registerGoogleUser(account.idToken!!)
+            } catch (e: ApiException) {
+                Log.e("구글", "${e} 로그인 실패. 로그인 데이터 없음")
+            }
         }
-    }
 
-    private fun loginGoogle(){
+    private fun loginGoogle() {
         val mGoogleSignInClient = GoogleSignIn.getClient(this, mGso)
         val googleSignIntent: Intent = mGoogleSignInClient.signInIntent
         getgoogleResult.launch(googleSignIntent)
     }
 
-    private fun registerGoogleUser(idToken: String){
+    private fun registerGoogleUser(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
 
         mAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this) {task ->
+            .addOnCompleteListener(this) { task ->
                 Log.i("구글", "구글 로그인 완료")
             }
     }
 
-    private fun logoutGoogle(){
+    private fun logoutGoogle() {
         val googleSignInClient: GoogleSignInClient = GoogleSignIn.getClient(this, mGso)
         googleSignInClient.signOut().addOnSuccessListener {
             mAuth.signOut()
@@ -145,7 +149,7 @@ class KakaoLoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
         }
     }
 
-    private fun deleteGoogle(){
+    private fun deleteGoogle() {
         mAuth.currentUser?.let {
             it.delete()
             Log.i("구글", "사용자 데이터 삭제")
